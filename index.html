@@ -1241,29 +1241,8 @@ RECORDS MANAGEMENT SYSTEM WITH CHATBOT SUPPORT</h5>
 
 
 
-// const links = document.querySelectorAll(".dropdown-item");
-// const sections = document.querySelectorAll(".services");
 
-// // Hide all service sections by default
-// sections.forEach(section => section.style.display = "none");
 
-// links.forEach(link => {
-//   link.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     const targetId = this.getAttribute("href").substring(1);
-//     const targetSection = document.getElementById(targetId);
-
-//     if (!targetSection) return;
-
-//     // Hide all service sections
-//     sections.forEach(section => {
-//       section.style.display = (section.id === targetId) ? "block" : "none";
-//     });
-
-//     // Smooth scroll to the revealed section
-//     targetSection.scrollIntoView({ behavior: "smooth" });
-//   });
-// });
 const links = document.querySelectorAll(".dropdown-item");
 const sections = document.querySelectorAll(".services");
 const aiDrop = document.querySelector(".ai-drop");
@@ -1350,8 +1329,7 @@ Best regards,
     );
   });
 
-  <!-- Cookie Logic -->
-  <script>
+
     function acceptCookies() {
       localStorage.setItem("cookiesAccepted", "true");
     }
