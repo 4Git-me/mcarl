@@ -25,6 +25,16 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
 
+  
+  <style>
+    .cookie-toast {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 1055;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: Yummy
   * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
@@ -1067,7 +1077,15 @@ RECORDS MANAGEMENT SYSTEM WITH CHATBOT SUPPORT</h5>
 
 
 
-
+  <!-- Toast Element -->
+  <div class="toast align-items-center text-bg-dark border-0 cookie-toast" id="cookieToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        This website uses cookies to ensure you get the best experience.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" onclick="acceptCookies()"></button>
+    </div>
+  </div>
 
 
   
@@ -1331,6 +1349,23 @@ Best regards,
 [Your Name]`
     );
   });
+
+  <!-- Cookie Logic -->
+  <script>
+    function acceptCookies() {
+      localStorage.setItem("cookiesAccepted", "true");
+    }
+
+    window.addEventListener("load", () => {
+      if (!localStorage.getItem("cookiesAccepted")) {
+        const toastElement = document.getElementById("cookieToast");
+        const toast = new bootstrap.Toast(toastElement, {
+          delay: 10000
+        });
+        toast.show();
+      }
+    });
+  
 </script>
 </body>
 
