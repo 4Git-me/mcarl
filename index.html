@@ -1316,19 +1316,19 @@ Best regards,
   });
 
 
-    function acceptCookies() {
-      localStorage.setItem("cookiesAccepted", "true");
-    }
+   // function acceptCookies() {
+   //   localStorage.setItem("cookiesAccepted", "true");
+   // }
 
-    window.addEventListener("load", () => {
-      if (!localStorage.getItem("cookiesAccepted")) {
-        const toastElement = document.getElementById("cookieToast");
-        const toast = new bootstrap.Toast(toastElement, {
-          delay: 10000
-        });
-        toast.show();
-      }
-    });
+  //  window.addEventListener("load", () => {
+    //  if (!localStorage.getItem("cookiesAccepted")) {
+     //   const toastElement = document.getElementById("cookieToast");
+    //    const toast = new bootstrap.Toast(toastElement, {
+     //     delay: 10000
+    //    });
+    //    toast.show();
+   //   }
+   // });
   
 </script>
 </body>
